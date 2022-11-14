@@ -2,11 +2,11 @@
 
 namespace Ezitisitis\LaravelOpenGraph\Test;
 
+use Ezitisitis\LaravelOpenGraph\OpenGraph;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
-use Ezitisitis\LaravelOpenGraph\OpenGraph;
 
 class OpenGraphTest extends TestCase
 {
