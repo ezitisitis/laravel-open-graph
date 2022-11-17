@@ -1,5 +1,10 @@
 # Laravel Open Graph
 
+[![Latest Version on Packagist][badge-version]][link-packagist]
+[![Total Downloads][badge-downloads]][link-packagist]
+[![CI Build Status][badge-ci]][link-ci]
+[![Style CI Build Status][badge-style-ci]][link-style-ci]
+
 Setting Open Graph for Laravel.
 
 ## Install
@@ -70,3 +75,12 @@ class ArticleController extends Controller
     }
 }
 ```
+
+[badge-version]: https://img.shields.io/packagist/v/ezitisitis/laravel-open-graph?style=flat-square
+[badge-downloads]: https://img.shields.io/packagist/dt/ezitisitis/laravel-open-graph?style=flat-square
+[badge-ci]: https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fezitisitis%2Flaravel-open-graph%2Fbadge%3Fref%3Dmain&style=flat-square
+[badge-style-ci]: https://github.styleci.io/repos/565724205/shield?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/ezitisitis/laravel-open-graph
+[link-ci]: https://actions-badge.atrox.dev/ezitisitis/laravel-open-graph/goto?ref=main
+[link-style-ci]: https://github.styleci.io/repos/565724205
