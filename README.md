@@ -38,9 +38,9 @@ class HomeController extends Controller
     public function index()
     {
         OpenGraph::start()
-            ->title()
-            ->description('The site description...')
-            ->image(asset('images/og-image.png'));
+            ->setTitle()
+            ->setDescription('The site description...')
+            ->setImage(asset('images/og-image.png'));
 
         return view('home');
     }
@@ -63,11 +63,11 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
         OpenGraph::start()
-            ->type('article')
-            ->title($article->title)
-            ->description($article->description)
-            ->image($article->thumbnail)
-            ->data([
+            ->setType('article')
+            ->setTitle($article->title)
+            ->setDescription($article->description)
+            ->setImage($article->thumbnail)
+            ->setData([
                 'article:published_time' => $article->created_at->toIso8601String(),
             ]);
 
