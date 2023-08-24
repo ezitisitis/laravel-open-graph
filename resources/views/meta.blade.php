@@ -1,28 +1,28 @@
-@if (OpenGraph::isEnabled())
-    @if (OpenGraph::getDescription())
-        <meta name="description" content="{{ OpenGraph::getDescription() }}">
+@if (Ezitisitis\LaravelOpenGraph\OpenGraph::isEnabled())
+    @if (Ezitisitis\LaravelOpenGraph\OpenGraph::getDescription())
+        <meta name="description" content="{{ Ezitisitis\LaravelOpenGraph\OpenGraph::getDescription() }}">
     @endif
-    <meta property="og:url" content="{{ OpenGraph::getUrl() }}" />
-    <meta property="og:type" content="{{ OpenGraph::getType() }}" />
-    <meta property="og:title" content="{{ OpenGraph::getTitle() }}" />
-    @if (OpenGraph::getDescription())
-        <meta property="og:description" content="{{ OpenGraph::getDescription() }}" />
+    <meta property="og:url" content="{{ Ezitisitis\LaravelOpenGraph\OpenGraph::getUrl() }}" />
+    <meta property="og:type" content="{{ Ezitisitis\LaravelOpenGraph\OpenGraph::getType() }}" />
+    <meta property="og:title" content="{{ Ezitisitis\LaravelOpenGraph\OpenGraph::getTitle() }}" />
+    @if (Ezitisitis\LaravelOpenGraph\OpenGraph::getDescription())
+        <meta property="og:description" content="{{ Ezitisitis\LaravelOpenGraph\OpenGraph::getDescription() }}" />
     @endif
-    @if (OpenGraph::getImage())
-        <meta property="og:image" content="{{ OpenGraph::getImage() }}" />
+    @if (Ezitisitis\LaravelOpenGraph\OpenGraph::getImage())
+        <meta property="og:image" content="{{ Ezitisitis\LaravelOpenGraph\OpenGraph::getImage() }}" />
     @endif
-    @if(OpenGraph::getSiteName())
-        <meta property="og:site_name" content="{{ OpenGraph::getSiteName() }}" />
+    @if(Ezitisitis\LaravelOpenGraph\OpenGraph::getSiteName())
+        <meta property="og:site_name" content="{{ Ezitisitis\LaravelOpenGraph\OpenGraph::getSiteName() }}" />
     @endif
-    @if(OpenGraph::getLocale())
-        <meta property="og:locale" content="{{ OpenGraph::getLocale() }}" />
+    @if(Ezitisitis\LaravelOpenGraph\OpenGraph::getLocale())
+        <meta property="og:locale" content="{{ Ezitisitis\LaravelOpenGraph\OpenGraph::getLocale() }}" />
     @endif
-    @if(OpenGraph::getAlternateLocale())
-        @foreach(OpenGraph::getAlternateLocale() as $alternateLocale)
+    @if(Ezitisitis\LaravelOpenGraph\OpenGraph::getAlternateLocale())
+        @foreach(Ezitisitis\LaravelOpenGraph\OpenGraph::getAlternateLocale() as $alternateLocale)
             <meta property="og:locale:alternate" content="{{ $alternateLocale }}" />
         @endforeach
     @endif
-    @foreach (OpenGraph::getData() as $key => $value)
+    @foreach (Ezitisitis\LaravelOpenGraph\OpenGraph::getData() as $key => $value)
         <meta property="og:{{ $key }}" content="{{ $value }}" />
     @endforeach
 @endif
