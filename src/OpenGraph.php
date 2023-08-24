@@ -485,7 +485,7 @@ class OpenGraph
         return $this;
     }
 
-    public function getTwitterSite(): string
+    public function getTwitterSite()
     {
         return $this->twitterSite;
     }
@@ -513,7 +513,7 @@ class OpenGraph
         return $this;
     }
 
-    public function getTwitterDescription(): string
+    public function getTwitterDescription()
     {
         return $this->twitterDescription;
     }
@@ -525,7 +525,7 @@ class OpenGraph
         return $this;
     }
 
-    public function getTwitterImage(): string
+    public function getTwitterImage()
     {
         return $this->twitterImage;
     }
@@ -537,7 +537,7 @@ class OpenGraph
         return $this;
     }
 
-    public function getTwitterImageAlt(): string
+    public function getTwitterImageAlt()
     {
         return $this->twitterImageAlt;
     }
