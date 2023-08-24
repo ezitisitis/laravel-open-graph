@@ -14,6 +14,8 @@ class OpenGraph
      */
     protected $enabled = false;
 
+    protected $twitterIsEnabled = false;
+
     /**
      * The open graph meta title.
      *
@@ -90,6 +92,48 @@ class OpenGraph
      * @var UrlGenerator
      */
     protected $urlGenerator;
+
+    /**
+     * Value for twitter:card
+     *
+     * @var string
+     */
+    protected $twitterCard;
+
+    /**
+     * Value for twitter:site
+     *
+     * @var string
+     */
+    protected $twitterSite;
+
+    /**
+     * Value for twitter:title
+     *
+     * @var string
+     */
+    protected $twitterTitle;
+
+    /**
+     * Value for twitter:description
+     *
+     * @var string
+     */
+    protected $twitterDescription;
+
+    /**
+     * Value for twitter:image
+     *
+     * @var string
+     */
+    protected $twitterImage;
+
+    /**
+     * Value for twitter:image:alt
+     *
+     * @var string
+     */
+    protected $twitterImageAlt;
 
     /**
      * Create a new laravel open graph instance.
@@ -410,6 +454,93 @@ class OpenGraph
         return $this;
     }
 
+    public function enableTwitterCard(): OpenGraph
+    {
+        $this->twitterIsEnabled = true;
+
+        return $this;
+    }
+
+    public function twitterIsEnabled(): bool
+    {
+        return $this->twitterIsEnabled;
+    }
+
+    public function setTwitterCard($content = null): OpenGraph
+    {
+        $this->twitterCard = $content ?? 'summary';
+
+        return $this;
+    }
+
+    public function getTwitterCard(): string
+    {
+        return $this->twitterCard;
+    }
+
+    public function setTwitterSite($content = null): OpenGraph
+    {
+        $this->twitterSite = $content;
+
+        return $this;
+    }
+
+    public function getTwitterSite(): string
+    {
+        return $this->twitterSite;
+    }
+
+    public function setTwitterTitle(string $pageTitle = null, string $glue = ' - ')
+    {
+        if (function_exists('title')) {
+            $this->twitterTitle = title($pageTitle ?? '');
+        } else {
+            $this->twitterTitle = ($pageTitle ? $pageTitle.$glue : '').$this->config->get('app.name');
+        }
+
+        return $this;
+    }
+
+    public function getTwitterTitle(): string
+    {
+        return $this->twitterTitle;
+    }
+
+    public function setTwitterDescription($content = null): OpenGraph
+    {
+        $this->twitterDescription = $content;
+
+        return $this;
+    }
+
+    public function getTwitterDescription(): string
+    {
+        return $this->twitterDescription;
+    }
+
+    public function setTwitterImage($content = null): OpenGraph
+    {
+        $this->twitterImage = $content;
+
+        return $this;
+    }
+
+    public function getTwitterImage(): string
+    {
+        return $this->twitterImage;
+    }
+
+    public function setTwitterImageAlt($content = null): OpenGraph
+    {
+        $this->twitterImageAlt = $content;
+
+        return $this;
+    }
+
+    public function getTwitterImageAlt(): string
+    {
+        return $this->twitterImageAlt;
+    }
     /**
      * Check the open graph meta is enabled.
      *

@@ -26,3 +26,19 @@
         <meta property="og:{{ $key }}" content="{{ $value }}" />
     @endforeach
 @endif
+@if(OpenGraph::twitterIsEnabled())
+    <meta property="twitter:card" content="{{ OpenGraph::getTwitterCard() }}" />
+    <meta property="twitter:title" content="{{ OpenGraph::getTwitterTitle() }}" />
+    @if(OpenGraph::getTwitterSite())
+        <meta property="twitter:site" content="{{ OpenGraph::getTwitterSite() }}" />
+    @endif
+    @if(OpenGraph::getTwitterDescription())
+        <meta property="twitter:description" content="{{ OpenGraph::getTwitterDescription() }}" />
+    @endif
+    @if(OpenGraph::getTwitterImage())
+        <meta property="twitter:image" content="{{ OpenGraph::getTwitterImage() }}" />
+    @endif
+    @if(OpenGraph::getTwitterImageAlt())
+        <meta property="twitter:image:alt" content="{{ OpenGraph::getTwitterImageAlt() }}" />
+    @endif
+@endif
