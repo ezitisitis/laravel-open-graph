@@ -76,6 +76,10 @@ class ArticleController extends Controller
 }
 ```
 
+## Credits
+
+- [Marks Bogdanovs](https://www.ezitisitis.com)
+
 [badge-version]: https://img.shields.io/packagist/v/ezitisitis/laravel-open-graph?style=flat-square
 [badge-downloads]: https://img.shields.io/packagist/dt/ezitisitis/laravel-open-graph?style=flat-square
 [badge-ci]: https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fezitisitis%2Flaravel-open-graph%2Fbadge%3Fref%3Dmain&style=flat-square
